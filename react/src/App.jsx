@@ -1,14 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
+
 import BountyList from "./pages/BountyList"
 import CodeEditor from "./pages/CodeEditor"
 
 function App() {
 
   return (
-    <>
-      <h1>TEE Bounty</h1>
-      <BountyList />
-      <CodeEditor />
-    </>
+    <div className="min-h-screen bg-gray-100">
+      <Routes>
+        <Route path="/" element={<BountyList />} />
+        <Route path="/submit" element={<CodeEditor />} />
+      </Routes>
+    </div>
   )
 }
 
