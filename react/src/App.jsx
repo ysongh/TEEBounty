@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import BountyList from "./pages/BountyList";
+import CreateBounty from './pages/CreateBounty';
 import CodeEditor from "./pages/CodeEditor";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<BountyList />} />
+        <Route path="/create" element={<CreateBounty />} />
         <Route path="/submit" element={<CodeEditor />} />
       </Routes>
     </div>

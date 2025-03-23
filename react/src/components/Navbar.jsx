@@ -26,6 +26,16 @@ function Navbar() {
               Home
             </NavLink>
             <NavLink
+              to="/create"
+              className={({ isActive }) =>
+                `text-white px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive ? 'bg-blue-700' : 'hover:bg-blue-500'
+                }`
+              }
+            >
+              Create Bounty
+            </NavLink>
+            <NavLink
               to="/submit"
               className={({ isActive }) =>
                 `text-white px-3 py-2 rounded-md text-sm font-medium ${
@@ -93,6 +103,17 @@ function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Home
+              </NavLink>
+              <NavLink
+                to="/create"
+                className={({ isActive }) =>
+                  `block text-white px-3 py-2 rounded-md text-base font-medium ${
+                    isActive ? 'bg-blue-700' : 'hover:bg-blue-500'
+                  }`
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Create Bounty
               </NavLink>
               <NavLink
                 to="/submit"
